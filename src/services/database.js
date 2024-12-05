@@ -3,13 +3,13 @@ const path = require('path');
 
 // Inicializar la conexión a la base de datos
 async function initialize() {
-    process.env.TNS_ADMIN = path.resolve(__dirname, '../../Wallet_REEFRESERVE');  // Ruta absoluta
+    process.env.TNS_ADMIN = path.resolve(__dirname, '../../Wallet_EGESVEN');  // Ruta absoluta
     try {
         await oracledb.createPool({
             user: "reef_user",
             password: "ReefReserve2024",
             connectString: "reefreserve_high",
-            walletLocation: path.resolve(__dirname, '../../Wallet_REEFRESERVE'),  // Ruta absoluta
+            walletLocation: path.resolve(__dirname, '../../Wallet_EGESVEN'),  // Ruta absoluta
             walletPassword: "HotelRR2024!"
         });
         console.log("Base de datos conectada correctamente.");
