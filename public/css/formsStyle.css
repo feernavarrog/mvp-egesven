@@ -4,7 +4,7 @@ html, body {
     height: 100%; /* Asegurar que el fondo cubra toda la página */
     margin: 0; /* Eliminar márgenes predeterminados */
     padding: 0; /* Eliminar padding predeterminado */
-    background: url('/images/9760871.jpg') no-repeat center center;
+    background: url('/images/fondo.jpg') no-repeat center center;
     background-size: cover;
 }
 
