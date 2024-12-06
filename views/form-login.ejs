@@ -1,0 +1,26 @@
+<h2 class="text-center">¡BIENVENIDO DE VUELTA!</h2>
+
+<div class="text-center mt-3 register-container">
+    <h4>¿No tienes cuenta?</h4>
+    <a href="/newRegister" class="btn btn-link">REGISTRATE</a>
+</div>
+
+
+    <form onsubmit="event.preventDefault(); login();">
+        <div class="form-group">
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="clave" name="clave" placeholder="Ingresa tu clave" required>
+        </div>
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            
+            <button type="button" class="btn btn-secondary d-inline-block ml-2" onclick="window.location.href='/newHome'">Volver</button>
+        </div>
+
+    </form>
+
+    
+
+    

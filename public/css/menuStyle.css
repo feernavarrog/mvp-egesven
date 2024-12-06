@@ -1,0 +1,12 @@
+/* public/css/menuStyle.css */
+
+.navbar {
+    background-color: #0F9AFF; /* Color de fondo del menú */
+}
+
+.navbar-brand img {
+    max-width: 30px; /* Ajustar el ancho máximo del logo */
+    max-height: 30px; /* Ajustar la altura máxima del logo */
+    width: auto; /* Mantener la proporción del logo */
+    height: auto; /* Mantener la proporción del logo */
+}
