@@ -1,7 +1,7 @@
 /* public/css/menuStyle.css */
 
 .navbar {
-    background-color: #0F9AFF; /* Color de fondo del menú */
+    background-color: #ff8d13; /* Color de fondo del menú */
 }
 
 .navbar-brand img {
@@ -10,3 +10,4 @@
     width: auto; /* Mantener la proporción del logo */
     height: auto; /* Mantener la proporción del logo */
 }
+

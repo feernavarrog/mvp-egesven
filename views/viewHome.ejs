@@ -7,34 +7,113 @@
     <!-- Bootstrap CSS -->
     <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/css/generalStyle.css" rel="stylesheet">
+    <link href="/css/menuStyle.css" rel="stylesheet">
     <!-- Incluir Flatpickr CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Inclui el menú superior -->
+    <!-- Incluye el menú superior -->
     <%- include('menu') %>
-
-    <!-- Contenido principal -->
-    <div class="container">
-        <h1 class="mt-5 bebas-neue">TU DESCANSO</h1>
-        <h1 class="mt-5 bebas-neue">NUESTRA PRIORIDAD</h1>
-
-                <!-- !Inclui el calendario: no es funcional, Sprint 2 se desarrolla -->
-                <%- include('calendario') %>
-
-                <!-- Catalogo provisorio, luego se hará esto desde "ver habitaciones"-->
-                <div class="text-center mt-4">
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='/clientCatalog'">Ver Catálogo temporal</button>
-                </div>
-    </div>
     
+    <!-- Banner de la página -->
+    <div class="banner">
+        <img src="/images/Banner-ecommerce-2019-simpson-studio.jpg" alt="Banner" class="img-fluid">
+    </div>
+
+    <!-- Sección de productos -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">$25.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 1', 25.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">$19.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 2', 19.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 3', 34.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 3', 34.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 3', 34.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">$34.99</p>
+                        <button class="btn btn-primary" onclick="añadirAlCarrito('Producto 3', 34.99)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS y las dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/authManager.js"></script>
+
+    <!-- Script para el carrito -->
+    <script>
+        // Función para añadir productos al carrito
+        function añadirAlCarrito(nombre, precio) {
+            // Aquí puedes agregar la lógica para añadir el producto al carrito, por ejemplo:
+            console.log("Producto añadido al carrito: " + nombre + " - Precio: $" + precio);
+            // Por ahora solo mostramos el mensaje en la consola, pero puedes guardarlo en el localStorage o hacer una llamada a una API para gestionar el carrito.
+        }
+    </script>
 </body>
 </html>
