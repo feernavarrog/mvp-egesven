@@ -1,13 +1,100 @@
 /* public/css/menuStyle.css */
 
 .navbar {
-    background-color: #ff8d13; /* Color de fondo del menú */
+    background-color: #fdfdfd; /* Color de fondo del menú */
+    
+}
+
+.navbar-dark .navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+    color: black !important; 
 }
 
 .navbar-brand img {
     max-width: 30px; /* Ajustar el ancho máximo del logo */
     max-height: 30px; /* Ajustar la altura máxima del logo */
-    width: auto; /* Mantener la proporción del logo */
+    width: 100px; /* Mantener la proporción del logo */
     height: auto; /* Mantener la proporción del logo */
 }
 
+.second-banner {
+    margin-top: 50px;  
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+.footer {
+    background-color: #f8a950;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+
+/* Barra de navegación personalizada */
+.custom-navbar {
+    background-color: #000000;  
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    height: 40px;                
+}
+
+/* Contenedor de la barra de navegación */
+.custom-navbar .container-fluid {
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    width: 100%;                
+}
+
+/* Estilos para la marca de la barra */
+.custom-navbar .navbar-brand {
+    color: white;               
+    font-size: 15px;             
+    text-align: center;         
+           
+}
+
+/* Estilo para cuando el ratón pasa sobre el texto */
+.custom-navbar .navbar-brand:hover {
+    color: #ff6a00;              
+}
+/* Barra con texto desplazándose */
+.custom-moving-navbar {
+    background-color: #ffe97a;  
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;  
+}
+
+.custom-moving-navbar2 {
+    background-color: #d5f799;  
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;  
+}
+
+.moving-text {
+    display: inline-block;
+    white-space: nowrap;  
+    animation: scrollText 15s linear infinite; 
+    font-size: 18px;
+    color: rgb(4, 4, 4); 
+}
+
+/* Animación para mover el texto de izquierda a derecha */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
