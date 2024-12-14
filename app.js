@@ -4,6 +4,7 @@ const path = require('path');
 const database = require('./src/services/database');
 const userRoutes = require('./src/routes/userRoutes');
 const roomRoutes = require('./src/routes/roomRoutes');
+const productRoutes = require('./src/routes/productRoutes');
 
 const app = express();
 
@@ -28,11 +29,14 @@ app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/users', userRoutes); // Rutas de usuarios
 app.use('/rooms', roomRoutes); // Rutas de habitaciones
+app.use('/products', productRoutes); // Rutas de productos
+
 
 app.get('/', (req, res) => {res.render('viewLogin');});  // Ruta inicial 
 app.get('/newLogin', (req, res) => {res.render('viewLogin');}); // Ruta de login 
 app.get('/newRegister', (req, res) => {res.render('viewRegister');});  // Ruta de registro
-app.get('/newHome', (req, res) => {res.render('viewHome');}); // Ruta de home
+app.get('/newHome', (req, res) => {
+  res.render('viewHome');}); // Ruta de home
 app.get('/adminPannel', (req, res) => {res.render('viewAdminPannel');}); // Ruta de panel de administrador 
 app.get('/adminUserList', (req, res) => {res.render('viewAdminUserList');}); // Ruta de lista de usuarios
 app.get('/adminRoomList', (req, res) => {res.render('viewAdminRoomList');}); // Ruta de lista de habitaciones

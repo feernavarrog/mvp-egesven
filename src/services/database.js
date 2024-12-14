@@ -6,8 +6,8 @@ async function initialize() {
     process.env.TNS_ADMIN = path.resolve(__dirname, '../../Wallet_EGESVEN');  // Ruta absoluta
     try {
         await oracledb.createPool({
-            user: "reef_user",
-            password: "ReefReserve2024",
+            user: "egesven_user",
+            password: "EgesVenUser2024",
             connectString: "reefreserve_high",
             walletLocation: path.resolve(__dirname, '../../Wallet_EGESVEN'),  // Ruta absoluta
             walletPassword: "HotelRR2024!"

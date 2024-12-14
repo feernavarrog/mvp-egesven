@@ -15,7 +15,10 @@ router.post('/getUser', userController.getUser);
 router.post('/getUserByEmail', userController.getUserByEmail);
 
 // Actualizar un usuario
-router.post('/updateUser', userController.updateUser);
+//router.post('/updateUser', userController.updateUser);
+
+// Actualizar un usuario
+router.put('/updateUser', userController.updateUser);
 
 // Eliminar un usuario
 router.post('/deleteUser', userController.deleteUser);

@@ -23,12 +23,14 @@ async function login() {
             const usuario = await response.json();
 
             // Verificar si la clave es correcta y el tipo de usuario, redirigir al panel correspondiente 
+            
             var tipoUsuarioDB = usuario[5];
-            var usuarioDB = usuario[1];
-            var claveDB = usuario[2];
+            var correoDB = usuario[2];
+            var claveDB = usuario[3];
         
-            if (claveDB === clave) {
-                sessionStorage.setItem('usuario', tipoUsuarioDB);
+            if (claveDB === clave && correoDB === correo) {
+                sessionStorage.setItem('correoUsuario', correoDB);
+                sessionStorage.setItem('tipoUsuario', tipoUsuarioDB);
                 window.location.href = '/newHome';
             } else {
                 alert('Contraseña incorrecta');
