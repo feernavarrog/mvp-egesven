@@ -9,7 +9,8 @@ async function getProducts() {
             p.desc_prod,
             p.stock,
             p.precio,
-            c.desc_categoria AS categoria
+            c.desc_categoria AS categoria,
+            imagen
         FROM 
             producto p
         JOIN 

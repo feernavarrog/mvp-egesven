@@ -131,6 +131,7 @@ async function getAllProductsForClient() {
 
         const row = `
             <tr>
+                <td><img src="/images/${product[6]}" alt="${product[1]}" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
                 <td>${product[1]}</td>
                 <td>${product[5]}</td>
                 <td>${product[4]}</td>
