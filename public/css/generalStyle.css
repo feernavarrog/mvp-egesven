@@ -1,7 +1,7 @@
 /* public/css/generalStyle.css */
 
 html, body {
-    background: url('/images/background.png') no-repeat center center fixed; /* Imagen de fondo */
+    background-color: #ffffff; /* Color de fondo del menú */
     background-size: cover; /* Asegurar que la imagen cubra toda la pantalla */
     font-family: Arial, sans-serif;
     color: #ffffff; /* Texto blanco para mejor contraste */
@@ -40,3 +40,4 @@ h1 {
 button {
     margin-bottom: 0;
 }
+

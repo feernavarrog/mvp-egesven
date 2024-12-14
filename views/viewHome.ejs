@@ -7,16 +7,152 @@
     <!-- Bootstrap CSS -->
     <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/css/generalStyle.css" rel="stylesheet">
+    <link href="/css/menuStyle.css" rel="stylesheet">
     <!-- Incluir Flatpickr CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Inclui el menú superior -->
+      
+
+    <!-- Incluye el menú superior -->
     <%- include('menu') %>
+    
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/Texto del párrafo.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/Texto del párrafo (1).png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/Texto del párrafo (4).png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-dark custom-moving-navbar2">
+        <div class="container-fluid">
+            <div class="moving-text">
+                <p> 🎁 ¡Bienvenidos a eGesven! Descubre nuestras ofertas especiales. ¡No te lo pierdas!🎁</p>
+            </div>
+        </div>
+    </nav>
+    
+  
 
     <!-- Contenido principal -->
+    <h1>LO MÁS VENDIDO</h1>
+    <!-- Sección de productos -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/pexels-jeshoots-21067.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Joystick playstation 4</h5>
+                        <p class="card-text">$25.99</p>
+                      
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 2 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (20).png" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Playstation 5</h5>
+                        <p class="card-text">$19.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 3 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (21).png" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Notebook Acer</h5>
+                        <p class="card-text">$34.99</p>
+                    
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 4 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (22).png" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Silla Gamer KDA</h5>
+                        <p class="card-text">$34.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 5 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (23).png" class="card-img-top" alt="Producto 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Audifonos gamer para xbox</h5>
+                        <p class="card-text">$34.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 6 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (24).png" class="card-img-top" alt="Producto 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Nintendo Switch</h5>
+                        <p class="card-text">$34.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 7 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (25).png" class="card-img-top" alt="Producto 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Galaxy S23 FE</h5>
+                        <p class="card-text">$34.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Producto 8 -->
+            <div class="col-md-3">
+                <div class="card mt-4">
+                    <img src="/images/Diseño sin título (26).png" class="card-img-top" alt="Producto 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Xiomi SmartBand</h5>
+                        <p class="card-text">$34.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container mt-5">
         <h1 class="text-center">Catálogo de Productos</h1>
         <table class="table table-striped table-hover mt-3" id="productTable">
@@ -182,19 +318,59 @@
         </div>
     </div>
 </div>
+<div class="second-banner">
+    <img src="/images/Texto del párrafo (3).png" alt="Banner" class="img-fluid">
+</div>
 
-    <div class="container">
-        <h1 class="mt-5 bebas-neue">TU DESCANSO</h1>
-        <h1 class="mt-5 bebas-neue">NUESTRA PRIORIDAD</h1>
-
-                <!-- !Inclui el calendario: no es funcional, Sprint 2 se desarrolla -->
-                <%- include('calendario') %>
-
-                <!-- Catalogo provisorio, luego se hará esto desde "ver habitaciones"-->
-                <div class="text-center mt-4">
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='/clientCatalog'">Ver Catálogo temporal</button>
+<h1>OFERTAS POR NAVIDAD</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Producto 1 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/images/Diseño sin título (29).png" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Unidad SSD 960GB Sata3 2.5" A400</h5>
+                    <p class="card-text">$25.99</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/images/Diseño sin título (27).png" class="card-img-top" alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Consola playstation 4 500GB con 2 juegos</h5>
+                    <p class="card-text">$19.99</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-md-3">
+            <div class="card">
+                <img src="/images/Diseño sin título (28).png" class="card-img-top" alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Impresora Brother</h5>
+                    <p class="card-text">$34.99</p>
+                </div>
+            </div>
+        </div>
+
+
+   
     </div>
+    
+</div>
+
+
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2024 eGesven. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 
     <!-- Bootstrap JS y las dependencias -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
