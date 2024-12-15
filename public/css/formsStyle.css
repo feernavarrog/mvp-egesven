@@ -1,25 +1,25 @@
 /* public/css/formsStyle.css */
 
 html, body {
-    height: 100%; /* Asegurar que el fondo cubra toda la página */
-    margin: 0; /* Eliminar márgenes predeterminados */
-    padding: 0; /* Eliminar padding predeterminado */
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
     background: url('/images/fondo.jpg') no-repeat center center;
     background-size: cover;
 }
 
 body {
-    display: flex; /* Usar flexbox para centrar el contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    min-height: 100vh; /* Asegurar que el fondo cubra toda la altura de la ventana */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
 }
 
 .wrapper {
-    width: 100%; /* Asegurar que el contenedor ocupe todo el ancho */
-    display: flex; /* Usar flexbox para centrar el contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .container {
@@ -50,10 +50,10 @@ h1, h2 {
     color: black;
 }
 
-/* Estilo al pasar el puntero sobre el botón */
+
 .btn-primary:hover {
-    background-color: #d5f799; /* Color más oscuro o diferente al original */
-    border-color: #d5f799; /* Mismo cambio en el borde */
+    background-color: #d5f799; 
+    border-color: #d5f799; 
     color: black;
 }
 
