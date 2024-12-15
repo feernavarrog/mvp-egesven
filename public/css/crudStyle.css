@@ -1,17 +1,17 @@
 /* public/css/crudStyle.css */
 
 html, body {
-    background-color: #ffffff; /* Color de fondo del menú */
-    background-size: cover; /* Asegurar que la imagen cubra toda la pantalla */
+    background-color: #ffffff; 
+    background-size: cover; 
     font-family: Arial, sans-serif;
-    color: #ffffff; /* Texto blanco para mejor contraste */
-    margin: 0; /* Eliminar margen predeterminado */
-    padding: 0; /* Eliminar padding predeterminado */
-    height: 100%; /* Asegurar que el cuerpo ocupe toda la altura de la ventana */
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    height: 100%; 
 }
 
 h1 {
-    color: #ffffff; /* Texto blanco */
+    color: #ffffff; 
     text-align: center;
     margin-top: 20px;
 }
@@ -22,22 +22,22 @@ h1 {
 
 .container {
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente para el contenedor */
-    min-height: 100vh; /* Asegurar que el contenedor ocupe toda la altura de la ventana */
+    background-color: rgba(0, 0, 0, 0.5); 
+    min-height: 100vh; 
 }
 
 .btn-custom {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffe97a;
+    color: rgb(0, 0, 0);
 }
 
 .alert-custom {
-    background-color: #28a745;
-    color: white;
+    background-color: #d5f799;
+    color: rgb(2, 2, 2);
 }
 
 /* Asegúrate de que no haya márgenes adicionales en los botones */
 button {
     margin-bottom: 0;
-    margin-right: 5px; /* Añadir un pequeño margen derecho para separar los botones */
+    margin-right: 5px; 
 }

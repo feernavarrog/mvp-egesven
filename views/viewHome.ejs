@@ -10,6 +10,9 @@
     <link href="/css/menuStyle.css" rel="stylesheet">
     <!-- Incluir Flatpickr CSS -->
     <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+    <!-- Agregar FontAwesome desde CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -53,23 +56,10 @@
 
     <!-- Contenido principal -->
    
-    <div class="container mt-5">
-        <h1 class="text-center">Catálogo de Productos</h1>
-        <table class="table table-striped table-hover mt-3" id="productTable">
-            <thead>
-                <tr>
-                    <th>Imagen</th>
-                    <th>Producto</th>
-                    <th>Categoría</th>
-                    <th>Precio</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody id="productTableBody">
-                <!-- Los productos se poblarán aquí -->
-            </tbody>
-        </table>
-
+    <div id="productCardContainer" class="row-custom">
+      
+    </div>
+    
         <!-- Botón para abrir el modal (visible solo para administradores) -->
         <div class="text-end" id="adminButtonContainer" style="display: none;">
             <button class="btn btn-success" onclick="openProductModal()">Agregar Producto</button>
@@ -122,26 +112,43 @@
         </div>
     </div>
     
-    <div>
-        <h2 class="text-center mt-5">Carrito</h2>
-        <table class="table table-striped table-hover mt-3" id="cartTable">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Categoría</th>
-                    <th>Precio</th>
-                    <th>Acción</th>
-                </tr>
-            </thead>
-            <tbody id="cartTableBody">
-                <!-- Los productos del carrito se poblarán aquí -->
-            </tbody>
-        </table>
-        <div class="text-end">
-            <h4>Total: $<span id="cartTotal">0.00</span></h4>
-            <button class="btn btn-success" onclick="checkout()">Realizar Compra</button>
+<!-- Botón para abrir el carrito con ícono -->
+<button class="btn btn-primary d-flex align-items-center shadow-sm" id="cartButton" data-bs-toggle="modal" data-bs-target="#cartModal">
+    <i class="fas fa-shopping-cart me-2"></i> <!-- Ícono de carrito -->
+    Ver Carrito
+</button>
+
+<!-- Modal del carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-hover" id="cartTable">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        <!-- Los productos del carrito se poblarán aquí -->
+                    </tbody>
+                </table>
+                <div class="text-end">
+                    <h4>Total: $<span id="cartTotal">0.00</span></h4>
+                    <button class="btn btn-success" onclick="checkout()">Realizar Compra</button>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
 
     <div id="userManagementSection" style="display: none;">
         <h1 class="text-center">Gestión de Usuarios</h1>

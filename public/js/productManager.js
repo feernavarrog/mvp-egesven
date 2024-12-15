@@ -1,3 +1,5 @@
+
+
 // Cargar tipoUsuario desde SessionStorage
 const tipoUsuario = sessionStorage.getItem('tipoUsuario');
 
@@ -118,29 +120,38 @@ async function getAllProductsForClient() {
     const response = await fetch('http://localhost:3000/products/getProducts');
     const products = await response.json();
 
-    const tableBody = document.getElementById('productTableBody');
-    tableBody.innerHTML = ''; // Limpiar la tabla de productos
+    const cardContainer = document.getElementById('productCardContainer');
+    cardContainer.innerHTML = ''; // Limpiar las tarjetas de productos
 
     products.forEach(product => {
         const actionButtons = `
-        <button class="btn btn-primary btn-sm" onclick='addToCart(${JSON.stringify(product)})'>Agregar al carrito</button>
-        ${tipoUsuario === '3' ? `
-        <button class="btn btn-danger btn-sm" onclick='deleteProduct(${product[0]})'>Eliminar</button>
-        <button class="btn btn-warning btn-sm" onclick='editProduct(${JSON.stringify(product)})'>Editar</button>` : ''}
+            <button class="btn btn-primary btn-sm btn-custom" onclick='addToCart(${JSON.stringify(product)})'>Agregar al carrito</button>
+            ${tipoUsuario === '3' ? `
+                <button class="btn btn-danger btn-sm btn-custom" onclick='deleteProduct(${product[0]})'>Eliminar</button>
+                <button class="btn btn-warning btn-sm btn-custom" onclick='editProduct(${JSON.stringify(product)})'>Editar</button>
+            ` : ''}
         `;
-
-        const row = `
-            <tr>
-                <td><img src="/images/${product[6]}" alt="${product[1]}" class="img-thumbnail" style="width: 50px; height: 50px;"></td>
-                <td>${product[1]}</td>
-                <td>${product[5]}</td>
-                <td>${product[4]}</td>
-                <td>${actionButtons}</td>
-            </tr>
+    
+        const card = `
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-custom">
+                <div class="card">
+                    <img src="/images/${product[6]}" alt="${product[1]}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${product[1]}</h5>
+                        <p class="card-text">${product[5]}</p>
+                        <p class="card-text"><strong>Precio: $${product[4]}</strong></p>
+                        <div class="card-actions">
+                            ${actionButtons}
+                        </div>
+                    </div>
+                </div>
+            </div>
         `;
-        tableBody.innerHTML += row;
+    
+        cardContainer.innerHTML += card;
     });
-}
+}    
+
 
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {

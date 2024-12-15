@@ -24,69 +24,77 @@ body {
 
 .container {
     max-width: 500px;
-    background-color: rgba(247, 247, 247, 0.651); /* Fondo gris con opacidad de 0.9 */
+    background-color: rgba(247, 247, 247, 0.651); 
     padding: 20px;
-    text-align: center; /* Centrar el contenido del formulario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.326); /* Añadir sombra para mejor visibilidad */
-    margin-left: auto; /* Esto mueve el contenedor hacia la derecha */
-    margin-right: 250px; /* Asegura que no haya margen a la derecha */
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.326);
+    margin-left: auto; 
+    margin-right: 250px; 
     border-radius: 10%;
 
 }
 
 
 h1, h2 {
-    color: black; /* Texto negro para los encabezados */
+    color: black;
 }
 
 .form-group label {
-    color: black; /* Texto negro para las etiquetas */
+    color: black;
     margin-top: 10px;
 }
 
 .btn-primary {
-    background-color: #f0d077; /* Fondo azul para los botones */
-    border-color: #f0d077; /* Borde azul para los botones */
+    background-color: #f0d077;
+    border-color: #f0d077;
+    color: black;
+}
+
+/* Estilo al pasar el puntero sobre el botón */
+.btn-primary:hover {
+    background-color: #d5f799; /* Color más oscuro o diferente al original */
+    border-color: #d5f799; /* Mismo cambio en el borde */
+    color: black;
 }
 
 .mt-4 {
-    margin-top: 1.5rem; /* Añadir margen superior para separar los botones de los campos */
+    margin-top: 1.5rem; 
 }
 
 .mb-3 {
-    margin-bottom: 1rem; /* Añadir margen inferior para alinear los botones */
+    margin-bottom: 1rem; 
 }
 
 .form-control {
-    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
-    padding: 12px 15px; /* Ajusta el relleno (espaciado interno) */
-    height: auto; /* Ajusta la altura si lo necesitas */
-    border-radius: 15px; /* Redondea los bordes de los campos de entrada */
+    font-size: 1.2rem; 
+    padding: 12px 15px; 
+    height: auto; 
+    border-radius: 15px; 
     margin-top: 20px;
-    background-color: rgba(253, 211, 72, 0.879); /* Fondo azul claro con opacidad */
+    background-color: rgba(253, 211, 72, 0.879); 
     color: #333; /* Color del texto */
 }
 
 .form-control:focus {
-    border-color: #ff5f02c2; /* Cambia el color del borde al hacer foco */
-    background-color: rgba(255, 113, 19, 0.356); /* Fondo más oscuro al hacer foco */
-    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #ff5f02c2; 
+    background-color: rgba(255, 113, 19, 0.356); 
+    outline: none;
 }
 .register-container {
-    display: flex; /* Usa Flexbox para alinear los elementos en fila */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     
 }
 
 .register-container h3 {
-    margin-right: 10px; /* Añade espacio entre el texto y el enlace */
+    margin-right: 10px; 
 }
 .register-container a {
-    color: black; /* Establece el color del enlace a negro */
+    color: black; 
     
 }
 
 .register-container a:hover {
-    color: #333; /* Cambia el color cuando el usuario pasa el ratón sobre el enlace */
+    color: #333; 
 }
